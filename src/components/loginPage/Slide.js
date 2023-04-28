@@ -26,8 +26,9 @@ function Slide() {
   };
 
   const nextSlide = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slides.length + 1 : currentIndex + 1;
+    const isLastSlide = currentIndex === slides.length - 1;
+    console.log({ isLastSlide });
+    const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
   return (
